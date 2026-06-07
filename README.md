@@ -24,8 +24,7 @@ in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 When no partisan affiliation was available, candidates were assigned the
 literal affiliation `None`. This is required because the current VoteKit
 Scottish CSV loader rejects empty candidate-party fields. `None` means that no
-affiliation is recorded in this dataset; it does not necessarily mean that a
-candidate received no partisan endorsement.
+affiliation is recorded in this dataset; it is not always an accurate description, since in some cases these candidates did receive partisan endorsements.
 
 Australian elections include Above the Line (ATL) votes that rank parties
 instead of individual candidates. For the VoteKit CSV copies, ATL votes were
@@ -49,6 +48,8 @@ print(election.election_states[0].scores)
 print(election.get_status_df())
 ```
 
+There are plans to eventually add more detailed tabulation display methods to Votekit, but for now the best way to access the round-by-round tallies is by accessing the `election.election_states`.
+
 ## Using ConcreteSTV
 
 In a directory where you're happy cloning the repo:
@@ -67,5 +68,5 @@ Choose an `.stv` file, an appropriate ruleset, and an output transcript path:
 ```
 
 Open `docs/Viewer.html` in a browser and select the transcript using "Browse."
-The chosen ruleset must match the jurisdiction if an authoritative tabulation
-is required.
+
+You can switch out the "AEC2019" ruleset with one of the many other 
