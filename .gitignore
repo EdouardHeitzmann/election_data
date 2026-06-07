@@ -1,0 +1,22 @@
+# Local environments, caches, and scratch files.
+/.venv/
+**/__pycache__/
+*.py[cod]
+/.tmp_*
+/.ipynb_checkpoints/
+.DS_Store
+
+# Local research sources and backups. The publication-ready copies live under
+# votekit/, concrete/, and conversion/.
+/australia-raw/
+/cambridge_2019_backup/
+/fairvote/
+/misc_elections/
+/portland-backup/
+/scot-elex-backup/
+/australian_to_votekit.ipynb
+
+# Locally extracted copies of large Australian federal CSV archives.
+/votekit/australia_federal/nsw_*_votekit.csv
+/votekit/australia_federal/qld_*_votekit.csv
+/votekit/australia_federal/vic_*_votekit.csv
